@@ -3,7 +3,7 @@ graph TD
     %% --- LAYER 1: DATA INGESTION & FEATURE EXTRACTION ---
     subgraph Ingestion_Layer [1. Problem Analysis & Property Extraction]
         P_Raw[Problem Description]         --> P_Analytic{Extraction Engine}
-        P_Raw                              --> Equal Descriptions{Equal Descriptions}
+        P_Raw                              --> Equal_Descriptions{Equal Descriptions}
         P_Analytic                         --> P_Goal[Goal Properties]
         P_Analytic                         --> P_Cap[Capabilities/Affordances]
         P_Analytic                         --> P_Con[Constraints/Requirements]
