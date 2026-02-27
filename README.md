@@ -59,7 +59,11 @@ graph TD
     %% --- LAYER 5: THE USER LEARNING LAYER (The Performance Tracker) ---
     subgraph User_Learning [5. Performance & Diagnostic Layer]
         User_Input[User Prediction Path]   --> Compare{Logic Gap Analyzer}
-        T_Sol                              --> Compare
+        Truth_Engine                       --> Compare
+        Constraint_Filter                  --> Compare
+        Equality_Engine                    --> Compare
+        Extraction_Engine                  --> Compare
+        Req_Type                           --> Compare
         
         Compare                            -->|Extraction Error| D_Pattern[Pattern Blindness]
         Compare                            -->|Filtering Error| D_Logic[Concept Misalignment]
