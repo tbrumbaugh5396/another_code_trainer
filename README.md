@@ -46,7 +46,7 @@ graph TD
 
     %% --- LAYER 4: SOLUTION OUTCOMES ---
     subgraph Solution_Outcomes [4. Truth Implementation]
-        C_DSA                              --> T_Sol[Truth Solutions]
+        Truth_Engine                       --> T_Sol[Truth Solutions]
         T_Sol                              --> S_Meta[Metadata: Styles, Best-in-Class]
         T_Sol                              --> S_Trade[Tradeoff Area: Time vs Space]
         T_Sol                              --> S_Rel[Related/Equal Solutions]
