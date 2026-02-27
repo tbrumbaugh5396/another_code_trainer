@@ -47,9 +47,13 @@ graph TD
     %% --- LAYER 4: SOLUTION OUTCOMES ---
     subgraph Solution_Outcomes [4. Truth Implementation]
         Truth_Engine                       --> T_Sol[Truth Solutions]
-        T_Sol                              --> S_Meta[Metadata: Styles, Best-in-Class]
-        T_Sol                              --> S_Trade[Tradeoff Area: Time vs Space]
-        T_Sol                              --> S_Rel[Related/Equal Solutions]
+
+        T_Sol                              --> T_Truth_Extractor{Truth Extractor}
+        T_Truth_Extractor                  --> S_Meta[Metadata: Styles, Best-in-Class]
+        T_Truth_Extractor                  --> S_Trade[Tradeoff Area: Time vs Space]
+        T_Truth_Extractor                  --> S_Rel[Related/Equal Solutions]
+
+
     end
 
     %% --- LAYER 5: THE USER LEARNING LAYER (The Performance Tracker) ---
