@@ -1,5 +1,8 @@
 ```mermaid
 graph TD
+    %% --- UNIVERSAL UTILITY ---
+    Diff_Engine{Δ Difference Engine}
+
     %% --- LAYER 1: DATA INGESTION & FEATURE EXTRACTION ---
     subgraph Ingestion_Layer [1. Problem Analysis & Property Extraction]
         P_Raw[Problem Description]         --> P_Analytic{Extraction Engine}
@@ -7,6 +10,9 @@ graph TD
         
         Equality_Engine                    --> P_Raw_Equal[Equal Problem Description]
         
+        %% Ingestion calls the Utility
+        P_Raw_Equal & P_Raw                -.->|Request Delta| Diff_Engine
+        Diff_Engine                        -.->|Returns Δ Constraints| P_Analytic
 
         P_Analytic                         --> P_Goal[Goal Properties]
         P_Analytic                         --> P_Cap[Capabilities/Affordances]
@@ -51,6 +57,12 @@ graph TD
         T_Sol                              --> T_Truth_Extractor{Truth Extractor}
         T_Sol                              -.-> Sys_Learn
 
+        %% Hierarchy calls the same Utility
+        C_General & C_Variants             -.->|Request Delta| Diff_Engine
+        Diff_Engine                        -.->|Returns Δ Properties| CF_Gate
+        
+        CF_Gate                            -->|Prunes via Delta| C_Variants
+
         T_Truth_Extractor                  --> S_Meta[Metadata: Styles, Best-in-Class]
         T_Truth_Extractor                  --> S_Trade[Tradeoff Area: Time vs Space]
         P_Con                              --> S_Trade
@@ -67,6 +79,9 @@ graph TD
         Equality_Engine                    --> Compare
         P_Analytic                         --> Compare
         Req_Type                           --> Compare
+
+        %% Compare uses the Engine to see if the User missed the Delta
+        Diff_Engine                        -.->|What was the Delta?| Compare
         
         Compare                            -->|Extraction Error| D_Pattern[Pattern Blindness]
         Compare                            -->|Filtering Error| D_Logic[Concept Misalignment]
@@ -77,6 +92,7 @@ graph TD
     end
 
     %% Styling
+    style Diff_Engine fill:#f1c40f,stroke:#000,stroke-width:3px,color:#000
     style CF_Gate fill:#f39c12,stroke:#000000,stroke-width:2px,color:#fff
     style Sys_Learn fill:#9b59b6,stroke:#000000,color:#fff
     style Truth_Engine fill:#3498db,stroke:#000000,color:#fff
