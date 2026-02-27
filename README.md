@@ -3,7 +3,11 @@ graph TD
     %% --- LAYER 1: DATA INGESTION & FEATURE EXTRACTION ---
     subgraph Ingestion_Layer [1. Problem Analysis & Property Extraction]
         P_Raw[Problem Description]         --> P_Analytic{Extraction Engine}
-        P_Raw                              --> Equal_Descriptions{Equal Descriptions}
+        P_Raw                              --> Equality_Engine{Equal Equality Engine}
+        
+        Equality_Engine                    --> P_Raw_Equal[Equal Problem Description]
+        
+
         P_Analytic                         --> P_Goal[Goal Properties]
         P_Analytic                         --> P_Cap[Capabilities/Affordances]
         P_Analytic                         --> P_Con[Constraints/Requirements]
@@ -11,6 +15,8 @@ graph TD
         P_Con                              --> Req_Type{Requirement Type}
         Req_Type                           --> Req_Exp[Explicit: Time/Space/Input]
         Req_Type                           --> Req_Imp[Implicit: Edge Cases/Logic]
+
+        Equality_Engine                    --> P_Analytic
     end
 
     %% --- LAYER 2: THE INTERMEDIATE LOGIC GATE ---
