@@ -41,7 +41,7 @@ graph TD
         C_DSA                              --- C_Nec[Necessary Conditions]
         C_Nec                              -.->|Back-Validation| CF_Gate
 
-        C_Pattern                          --> Truth_Engine{Truth Engine}
+        C_DSA                              --> Truth_Engine{Truth Engine}
     end
 
     %% --- LAYER 4: SOLUTION OUTCOMES ---
