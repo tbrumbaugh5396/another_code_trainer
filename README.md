@@ -77,13 +77,13 @@ graph TD
     end
 
     %% Styling
-    style CF_Gate fill:#f39c12,stroke:#27ae60,stroke-width:2px,color:#fff
-    style Sys_Learn fill:#9b59b6,stroke:#27ae60,color:#fff
-    style Truth_Engine fill:#3498db,stroke:#27ae60,color:#fff
-    style T_Truth_Extractor fill:#f71c1c,stroke:#27ae60,color:#fff
-    style Equality_Engine fill:#000000,stroke:#27ae60,color:#fff
-    style Req_Type fill:#afcc70,stroke:#27ae60,color:#fff
-    style P_Analytic fill:#00ae60,stroke:#27ae60,color:#fff
-    style Compare fill:#e74c3c,stroke:#27ae60,stroke-width:2px,color:#fff
-    style Heatmap fill:#2ecc71,stroke:#27ae60,color:#fff
+    style CF_Gate fill:#f39c12,stroke:#000000,stroke-width:2px,color:#fff
+    style Sys_Learn fill:#9b59b6,stroke:#000000,color:#fff
+    style Truth_Engine fill:#3498db,stroke:#000000,color:#fff
+    style T_Truth_Extractor fill:#f71c1c,stroke:#000000,color:#fff
+    style Equality_Engine fill:#000000,stroke:#000000,color:#fff
+    style Req_Type fill:#afcc70,stroke:#000000,color:#fff
+    style P_Analytic fill:#00ae60,stroke:#000000,color:#fff
+    style Compare fill:#e74c3c,stroke:#000000,stroke-width:2px,color:#fff
+    style Heatmap fill:#2ecc71,stroke:#000000,color:#fff
 ```
