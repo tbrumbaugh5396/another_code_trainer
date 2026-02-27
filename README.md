@@ -83,6 +83,7 @@ graph TD
     style T_Truth_Extractor fill:#2ecc71,stroke:#27ae60,color:#fff
     style Equality_Engine fill:#27ae60,stroke:#27ae60,color:#fff
     style Req_Type fill:#27ae60,stroke:#27ae60,color:#fff
+    style P_Analytic fill:#27ae60,stroke:#27ae60,color:#fff
     style Compare fill:#e74c3c,stroke:#c0392b,stroke-width:2px,color:#fff
     style Heatmap fill:#2ecc71,stroke:#27ae60,color:#fff
 ```
