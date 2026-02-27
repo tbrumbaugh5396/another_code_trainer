@@ -17,6 +17,7 @@ graph TD
         Req_Type                           --> Req_Imp[Implicit: Edge Cases/Logic]
 
         Equality_Engine                    --> P_Analytic
+        P_Raw_Equal                        --> P_Analytic
     end
 
     %% --- LAYER 2: THE INTERMEDIATE LOGIC GATE ---
