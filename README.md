@@ -13,6 +13,7 @@ graph TD
         %% Ingestion calls the Utility
         P_Raw_Equal & P_Raw                -.->|Request Delta| Diff_Engine
         Diff_Engine                        -.->|Returns Δ Constraints| P_Analytic
+        Diff_Engine                        -.-> Equality_Engine
 
         P_Analytic                         --> P_Goal[Goal Properties]
         P_Analytic                         --> P_Cap[Capabilities/Affordances]
