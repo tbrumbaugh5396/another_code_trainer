@@ -80,10 +80,10 @@ graph TD
     style CF_Gate fill:#f39c12,stroke:#d35400,stroke-width:2px,color:#fff
     style Sys_Learn fill:#9b59b6,stroke:#8e44ad,color:#fff
     style Truth_Engine fill:#3498db,stroke:#2980b9,color:#fff
-    style T_Truth_Extractor fill:#2ecc71,stroke:#000000,color:#fff
-    style Equality_Engine fill:#27ae60,stroke:#ae6060,color:#fff
-    style Req_Type fill:#27ae60,stroke:#27aeae,color:#fff
-    style P_Analytic fill:#27ae60,stroke:#276060,color:#fff
+    style T_Truth_Extractor fill:#2ecc71,stroke:#27ae60,color:#fff
+    style Equality_Engine fill:#000000,stroke:#27ae60,color:#fff
+    style Req_Type fill:#afcc70,stroke:#27ae60,color:#fff
+    style P_Analytic fill:#00ae60,stroke:#27ae60,color:#fff
     style Compare fill:#e74c3c,stroke:#c0392b,stroke-width:2px,color:#fff
     style Heatmap fill:#2ecc71,stroke:#27ae60,color:#fff
 ```
