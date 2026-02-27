@@ -49,8 +49,11 @@ graph TD
         Truth_Engine                       --> T_Sol[Truth Solutions]
 
         T_Sol                              --> T_Truth_Extractor{Truth Extractor}
+        T_Sol                              -.-> Sys_Learn
+
         T_Truth_Extractor                  --> S_Meta[Metadata: Styles, Best-in-Class]
         T_Truth_Extractor                  --> S_Trade[Tradeoff Area: Time vs Space]
+        P_Con                              --> S_Trade
         T_Truth_Extractor                  --> S_Rel[Related/Equal Solutions]
 
 
